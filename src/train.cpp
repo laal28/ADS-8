@@ -31,7 +31,7 @@ int Train::getLength() {
         countOp++;
         vanCount++;
         
-        for ( ; !currentVan->light; urrentVan = currentVan->next, countOp++, vanCount+ );
+        for ( ; !currentVan->light; currentVan = currentVan->next, countOp++, vanCount+ );
       
         currentVan->light = false;
         res = vanCount;
