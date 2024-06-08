@@ -23,7 +23,7 @@ void Train::addCage(bool light) {
 
 int Train::getLength() {
     Cage *currentVan = first;
-    currentVan->light = false;
+    currentVan->light = true;
     
     int res = 0;
     int vanCount = 0;
