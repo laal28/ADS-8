@@ -25,7 +25,7 @@ int Train::getLength() {
     Cage *currentVan = first;
     currentVan->light = !currentVan->light;
       
-    for ( int res = 0, int vanCount = 0; ; )
+    for ( int res = 0, vanCount = 0; ; )
     {
         currentVan = currentVan->next;
         countOp++;
