@@ -28,8 +28,10 @@ int Train::getLength() {
     }
     int res = 0;
     int vanCount = 0;
-    
-    for (; ; currentVan = currentVan->next, countOp++, vanCount++) {
+    while (true) {
+        currentVan = currentVan->next;
+        countOp++;
+        vanCount++;
         while (!currentVan->light) {
             currentVan = currentVan->next;
             countOp++;
@@ -37,11 +39,11 @@ int Train::getLength() {
         }
         currentVan->light = false;
         res = vanCount;
-        
-        for (; vanCount > 0; countOp++, vanCount--) {
+        while (vanCount > 0) {
+            countOp++;
+            vanCount--;
             currentVan = currentVan->prev;
         }
-        
         if (!currentVan->light) {
             return res;
         }
